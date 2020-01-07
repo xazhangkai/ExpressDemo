@@ -6,5 +6,6 @@ router.get('/getUserList', service.getUserList)
 router.post('/addUser', service.addUser)
 router.post('/updateUser', service.updateUser)
 router.get('/deleteUser', service.deleteUser)
+router.post('/uploadUserImg', service.uploadUserImg)
 
 module.exports = router;

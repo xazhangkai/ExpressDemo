@@ -77,3 +77,7 @@ exports.deleteUser = (req, res, next) => {
   }
 
 }
+
+exports.uploadUserImg = (req, res, next) => {
+  console.log(req.body, req.files, req.file)
+}
