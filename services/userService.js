@@ -1,5 +1,6 @@
-const db = require("../db/dbConfig")
+const db = require("../config/dbConfig")
 const uuID = require("node-uuid")
+
 exports.getUserList = (req, res, next) => {
   let userName = req.query.userName
   let sql = 'select * from userInfo where 1=1'
@@ -80,4 +81,10 @@ exports.deleteUser = (req, res, next) => {
 
 exports.uploadUserImg = (req, res, next) => {
   console.log(req.body, req.files, req.file)
+  if (req.file || req.files) {
+    res.json({
+      file: req.file || req.files
+    })
+  }
+
 }
