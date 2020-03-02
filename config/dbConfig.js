@@ -2,7 +2,7 @@ const mysql = require("mysql")
 
 exports.dbBase = (sql, data, callBack) => {
   const connection = mysql.createConnection({
-    host: '172.20.36.15',
+    host: '172.20.36.145',
     user: 'test',
     password: '123456',
     database: 'devExpress',
