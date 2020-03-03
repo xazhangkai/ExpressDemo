@@ -6,7 +6,12 @@ exports.dbBase = (sql, data, callBack) => {
     user: 'test',
     password: '123456',
     database: 'devExpress',
-    port: 3306
+    port: 3306,
+    pool: {
+      min: 0,
+      max: 10,
+      idleTimeoutMillis: 3000
+    }
   })
   connection.connect()
   connection.query(sql, data, function (error, results, fields) {
